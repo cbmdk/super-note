@@ -1,0 +1,8 @@
+[phases.setup]
+nixpkgsArchive = 'd05592ea7e9656648093dfe0e817819486bd5054'
+
+[phases.build]
+cmds = ['dotnet publish SuperNote.WebApi -c Release -o out']
+
+[start]
+cmd = 'cd out && dotnet SuperNote.WebApi.dll --urls=http://0.0.0.0:3000' 
